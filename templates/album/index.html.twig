@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Melomania{% endblock %}
+
+{% block body %}
+    <div class="container">
+            {% for album in albums %}
+                {% include "components/card.html.twig" %}
+            {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<div class="card">
+    <img src="pictures/{{album.picture}}" class="card-img-top" alt="{{album.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{album.name}}</h5>
+      <p class="card-text"><b>Artist : </b>{{album.artist}}</p>
+      <p class="card-text"><b>Release Year: </b>{{album.releaseYear|date("Y dd M")}}</p>
+      <p class="card-text"><b>Rating: </b>{{album.getFkRating.name}}</p>
+      <p class="card-text"><b>Genre: </b>{{album.genre}}</p>
+      <p class="card-text"><i><small>Posted on: {{album.createDate|date("d.m.Y g:i")}}</small></i></p>
+
+
+      <a href="/details/{{album.id}}" class="btn btn-primary">Details</a>
+      <a href="/edit/{{album.id}}" class="btn btn-warning">Edit</a>
+      <a href="/delete/{{album.id}}" class="btn btn-danger" onclick="return confirm('Do you want to delete \'{{album.name}}\' task?')">Delete</a>
+
+    </div>
+  </div>

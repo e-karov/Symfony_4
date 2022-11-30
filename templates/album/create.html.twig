@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block title %}Melomania | Add Album{% endblock %}
+{% block body %}
+    <h1>New Album</h1>
+    
+    <div class="container w-50">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Melomania | Details{% endblock %}
+
+{% block body %}
+    <h1>Album Details</h1>
+
+   <div class="container">
+        <h4 class="page-header">{{album.name}}</h4>
+        <img src="/pictures/{{album.picture}}" class="img-fluid" alt="{{album.picture}}">
+        <ul class="list-group">
+            <li class="list-group-item">Artist: {{album.artist}}</li>
+            <li class="list-group-item">Release Year: {{album.releaseYear|date("Y dd M")}}</li>
+            <li class="list-group-item">Rating: <b><i>{{album.getFkRating.name}}</i></b></li>
+            <li class="list-group-item">Genre: {{album.genre}} </li>
+        </ul>
+        <div>
+            <h5>Description:</h5>
+            <p>
+                {{album.description}}
+            </p>
+        </div>
+        <a class="btn btn-primary" href="/">Back to List</a>
+   </div>
+
+{% endblock %}
