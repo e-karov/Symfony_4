@@ -1,0 +1,21 @@
+body {
+    background-image: url("../pictures/0ez4_j99w_170828.jpg");
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background-color: rgb(253, 220, 177) !important;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+}
+
+.card {
+    width: 16em;
+    margin:1rem;
+    background-color:antiquewhite !important;
+}
